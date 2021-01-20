@@ -391,6 +391,23 @@ module SmartAnswer
         end
       end
 
+      context "#passport_country_is_hong_kong_british_national_overseas?" do
+        should 'return true if passport_country is "hong-kong-(british-national-overseas"' do
+          calculator = UkVisaCalculator.new
+          calculator.passport_country = "hong-kong-(british-national-overseas)"
+          assert calculator.passport_country_is_hong_kong_british_national_overseas?
+        end
+
+        should 'return false if passport_country is not "hong-kong-(british-national-overseas"' do
+          calculator = UkVisaCalculator.new
+          calculator.passport_country = "not-hong-kong-(british-national-overseas)"
+          assert_not calculator.passport_country_is_hong_kong_british_national_overseas?
+
+          calculator.passport_country = "hong-kong"
+          assert_not calculator.passport_country_is_hong_kong_british_national_overseas?
+        end
+      end
+
       context "#passport_country_is_ireland?" do
         should 'return true if passport_country is "ireland"' do
           calculator = UkVisaCalculator.new

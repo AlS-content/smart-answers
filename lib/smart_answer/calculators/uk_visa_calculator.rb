@@ -74,6 +74,10 @@ module SmartAnswer::Calculators
       @passport_country == "hong-kong"
     end
 
+    def passport_country_is_hong_kong_british_national_overseas?
+      @passport_country == "hong-kong-(british-national-overseas)"
+    end
+
     def passport_country_is_ireland?
       @passport_country == "ireland"
     end
