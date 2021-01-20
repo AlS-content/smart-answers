@@ -7,6 +7,14 @@
 
   <%= render partial: 'stateless_or_refugee', locals: {calculator: calculator} %>
 
+  <% if calculator.passport_country_is_hong_kong_british_national_overseas? %>
+    ###British National Overseas (BNO) visa
+
+    You can apply for a [British National Overseas (BNO) visa](/british-national-overseas-bno-visa/) to live, work and study in the UK.
+
+    You do not need a job offer, unlike most work visas. You can do any type of work (except work as a professional sportsperson or sports coach).
+  <% end %>
+
   ###Skilled workers
 
   A ‘skilled worker’ visa may be suitable if you’ve been offered a:

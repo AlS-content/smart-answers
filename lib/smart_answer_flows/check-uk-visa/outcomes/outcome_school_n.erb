@@ -11,5 +11,11 @@
 
   ##If you’re staying more than 6 months
 
-  You can apply for a [Parent of a Child Student visa](/parent-of-a-child-at-school-visa) if your child is under 12 and at an independent day school.
+  <% if calculator.passport_country_is_hong_kong_british_national_overseas? %>
+    You can apply for a [British National Overseas (BNO) visa](/british-national-overseas-bno-visa/).
+
+    You can also apply for a [Parent of a Child Student visa](parent-of-a-child-at-school-visa), but the application fee is higher. To be eligible, your child must be under 12 and at an independent day school.
+  <% else %>
+    You can apply for a [Parent of a Child Student visa](/parent-of-a-child-at-school-visa) if your child is under 12 and at an independent day school.
+  <% end %>
 <% end %>
